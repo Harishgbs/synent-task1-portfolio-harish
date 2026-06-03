@@ -750,7 +750,8 @@ ul { list-style: none; }
   gap: 24px;
 }
 
-.project-card {
+.project-card,
+.project-card--link {
   background: var(--color-bg-glass);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
