@@ -489,6 +489,193 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   Education Timeline
+   ============================================================ */
+.timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-accent), transparent);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-primary), 0 0 20px var(--color-primary-glow);
+}
+
+.timeline__content {
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  transition: all var(--transition);
+}
+
+.timeline__content:hover {
+  border-color: rgba(108, 92, 231, 0.25);
+  transform: translateX(4px);
+}
+
+.timeline__badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: var(--color-primary-glow);
+  color: var(--color-primary-light);
+  margin-bottom: 10px;
+}
+
+.timeline__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.timeline__institute {
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.timeline__detail {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+}
+
+.timeline__detail strong {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Experience
+   ============================================================ */
+.experience {
+  background: var(--color-bg-alt);
+}
+
+.experience__card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  transition: all var(--transition);
+}
+
+.experience__card:hover {
+  border-color: rgba(108, 92, 231, 0.25);
+  box-shadow: 0 12px 40px rgba(108, 92, 231, 0.08);
+}
+
+.experience__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.experience__icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-glow);
+  color: var(--color-primary-light);
+  flex-shrink: 0;
+}
+
+.experience__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.experience__company {
+  font-size: 0.925rem;
+  color: var(--color-text-muted);
+}
+
+.experience__period {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(0, 212, 170, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  white-space: nowrap;
+}
+
+.experience__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.experience__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ============================================================
+   Tags
+   ============================================================ */
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--color-bg-glass);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================================
    Animations
    ============================================================ */
 @keyframes fadeInUp {
@@ -512,6 +699,17 @@ ul { list-style: none; }
 .about__card:nth-child(1) { animation: fadeInUp 0.6s 0.1s ease both; }
 .about__card:nth-child(2) { animation: fadeInUp 0.6s 0.2s ease both; }
 .about__card:nth-child(3) { animation: fadeInUp 0.6s 0.3s ease both; }
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.timeline__item:nth-child(1) .timeline__content { animation: fadeInRight 0.6s 0.1s ease both; }
+.timeline__item:nth-child(2) .timeline__content { animation: fadeInRight 0.6s 0.2s ease both; }
+.timeline__item:nth-child(3) .timeline__content { animation: fadeInRight 0.6s 0.3s ease both; }
+
+.experience__card { animation: fadeInUp 0.6s 0.1s ease both; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
