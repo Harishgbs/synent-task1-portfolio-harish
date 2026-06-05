@@ -1334,6 +1334,59 @@ ul { list-style: none; }
   }
 }
 
+@media (prefers-contrast: high) {
+  :root {
+    --color-text-muted: #b0b0c8;
+    --color-text-dim: #8888a0;
+    --color-border: rgba(255, 255, 255, 0.2);
+  }
+
+  .nav__link {
+    color: var(--color-text);
+  }
+
+  .hero__desc,
+  .about__text,
+  .experience__desc,
+  .contact__desc,
+  .project-card__desc {
+    color: var(--color-text);
+  }
+}
+
+@media (hover: hover) {
+  .skill-tag:hover {
+    background: var(--color-primary-glow);
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(108, 92, 231, 0.15);
+  }
+}
+
+@media (hover: none) {
+  .project-card__overlay {
+    opacity: 1;
+    background: rgba(10, 10, 26, 0.5);
+  }
+
+  .project-card__cta {
+    opacity: 1;
+  }
+
+  .project-card__action {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .btn--primary,
+  .project-card__badge {
+    border: 2px solid ButtonText;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero__inner {
     grid-template-columns: 1fr;
