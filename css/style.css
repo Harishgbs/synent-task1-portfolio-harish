@@ -1604,3 +1604,39 @@ ul { list-style: none; }
     border: 1px solid #333;
   }
 }
+
+.project-card--featured .project-card__body {
+  background: linear-gradient(180deg, transparent, rgba(0, 212, 170, 0.02));
+}
+
+.skill-category__items {
+  position: relative;
+}
+
+.skill-tag {
+  animation: tagAppear 0.4s ease both;
+}
+
+.skill-tag:nth-child(1) { animation-delay: 0.02s; }
+.skill-tag:nth-child(2) { animation-delay: 0.04s; }
+.skill-tag:nth-child(3) { animation-delay: 0.06s; }
+.skill-tag:nth-child(4) { animation-delay: 0.08s; }
+.skill-tag:nth-child(5) { animation-delay: 0.10s; }
+.skill-tag:nth-child(6) { animation-delay: 0.12s; }
+.skill-tag:nth-child(7) { animation-delay: 0.14s; }
+
+@keyframes tagAppear {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.experience__achievements li {
+  counter-increment: achievement;
+}
+
+.experience__achievements li::before {
+  content: '0' counter(achievement) '.';
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+}
