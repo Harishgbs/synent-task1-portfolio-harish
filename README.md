@@ -2,7 +2,7 @@
 
 Professional portfolio website showcasing the skills, projects, and experience of **G B Harish**, a Software Engineer and Full Stack Developer.
 
-> **Live Demo:** [https://harishdevs.vercel.app](https://harishdevs.vercel.app)
+> **Live Demo:** [https://harishdevs.vercel.app]([https://harishdevs.vercel.app](https://harishgbs.github.io/synent-task1-portfolio-harish/))
 
 ---
 
